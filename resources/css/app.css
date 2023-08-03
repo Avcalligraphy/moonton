@@ -9,6 +9,10 @@
     display: none !important;
 }
 
+@layer base{
+    ::-webkit-scrollbar{
+        @apply hidden
+}}
 @layer components{
 /* 
     [type= "text"],
