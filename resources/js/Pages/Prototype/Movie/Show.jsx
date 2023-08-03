@@ -1,5 +1,5 @@
 import ReactPlayer from "react-player"
-import { Link } from "@inertiajs/react";
+import { Head, Link } from "@inertiajs/react";
 
 export default function Show() {
     return (
@@ -7,6 +7,7 @@ export default function Show() {
             className="mx-auto w-screen h-screen relative watching-page font-poppins bg-form-bg"
             id="stream"
         >
+            <Head title="Movie" />
             <div className="pt-[100px]">
                 <ReactPlayer
                     url="https://www.youtube.com/watch?v=t9VWICGOD90&list=RDQrupIQIGIqI&index=8&ab_channel=HITSRecords"
