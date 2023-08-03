@@ -1,6 +1,6 @@
 import React, {useEffect, useRef} from 'react'
 import PropTypes from 'prop-types'
-import "../../css/input.css"
+// import "../../css/input.css"
 
 Input.propTypes = {
     type: PropTypes.oneOf(["text", "email", "password", "number", "file"]),
@@ -37,14 +37,14 @@ export default function Input  ({type = 'text', name, value, defaultValue, class
               name={name}
               value={value}
               defaultValue={defaultValue}
-              className={`rounded-2xl bg-form-bg py-[13px] px-7 w-full ${isError && "input-error"} input-${variant} ${className} `}
+              className={`rounded-2xl bg-form-bg py-[13px] px-7 w-full ${
+                  isError && "input-error"
+              } input-${variant} ${className} `}
               ref={input}
               autoComplete={autoComplete}
               required={required}
               onChange={(e) => handleChange(e)}
               placeholder={placeholder}
-              
-              
           />
       </div>
   );

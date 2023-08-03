@@ -6,7 +6,7 @@ import {Link, Head} from '@inertiajs/react'
 export default function Login (){
     return (
         <>
-        <Head title='Sign In' />
+            <Head title="Sign In" />
             <div className="mx-auto max-w-screen min-h-screen bg-black text-white md:px-10 px-3">
                 <div className="fixed top-[-50px] hidden lg:block">
                     <img
@@ -53,11 +53,16 @@ export default function Login (){
                                 </div>
                             </div>
                             <div className="grid space-y-[14px] mt-[30px]">
-                                <PrimaryButton type="button" variant="primary">
-                                    <span className="text-base font-semibold">
-                                        Start Watching
-                                    </span>
-                                </PrimaryButton>
+                                <Link href={route("prototype.dashboard")}>
+                                    <PrimaryButton
+                                        type="button"
+                                        variant="primary"
+                                    >
+                                        <span className="text-base font-semibold">
+                                            Start Watching
+                                        </span>
+                                    </PrimaryButton>
+                                </Link>
                                 <Link href={route("prototype.register")}>
                                     <PrimaryButton
                                         type="button"
