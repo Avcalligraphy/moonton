@@ -1,9 +1,9 @@
 import { useEffect } from "react";
 import InputError from "@/Components/InputError";
 import Label from "@/Components/Label";
+import TextInput from "@/Components/TextInput";
 import PrimaryButton from "@/Components/PrimaryButton";
 import { Link, Head, useForm } from "@inertiajs/react";
-import TextInput from "@/Components/TextInput";
 
 export default function Login() {
     const { data, setData, post, processing, errors, reset } = useForm({
