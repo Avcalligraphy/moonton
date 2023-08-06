@@ -1,6 +1,6 @@
 import { forwardRef, useEffect, useRef } from 'react';
 import "../../css/input.css";
-export default forwardRef(function TextInput({ type = 'text', name, className, variant = 'primary', autoComplete, required, isFocused, placeholder, isError , ...props }, ref) {
+export default forwardRef(function TextInput({ type = 'text', name, className, variant = 'primary', autoComplete, required, isFocused, placeholder, isError, defaultValue , ...props }, ref) {
     const input = ref ? ref : useRef();
 
     useEffect(() => {
@@ -20,6 +20,7 @@ export default forwardRef(function TextInput({ type = 'text', name, className, v
             ref={input}
             autoComplete={autoComplete}
             required={required}
+            defaultValue={defaultValue}
             placeholder={placeholder}
         />
     );

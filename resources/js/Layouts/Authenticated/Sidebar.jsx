@@ -4,7 +4,7 @@ import SubscriptionDetail from './SubscriptionDetail';
 import { UserMenu, UserOthers } from './MenuList';
 import MenuItem from './MenuItem';
 export default function Sidebar ({auth}) {
-    console.log(auth)
+    // console.log(auth)
     return (
         <aside className="fixed z-50 w-[300px] h-full">
             <div className="flex flex-col p-[30px] pr-0 border-r border-gray-[#F1F1F1] overflow-y-auto h-full">
