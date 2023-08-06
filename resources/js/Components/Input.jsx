@@ -1,6 +1,6 @@
 import React, {useEffect, useRef} from 'react'
 import PropTypes from 'prop-types'
-// import "../../css/input.css"
+import "../../css/input.css"
 
 Input.propTypes = {
     type: PropTypes.oneOf(["text", "email", "password", "number", "file"]),
@@ -20,7 +20,7 @@ Input.propTypes = {
 
 };
 
-export default function Input  ({type = 'text', name, value, defaultValue, className, variant = 'primary', autoComplete, required, isFocused, handleChange, placeholder, isError }) {
+export default function Input  ({type = 'text', name, className, variant = 'primary', autoComplete, required, isFocused, placeholder, isError }) {
     const input = useRef();
     useEffect(() => {
       if (isFocused) {
@@ -35,15 +35,12 @@ export default function Input  ({type = 'text', name, value, defaultValue, class
           <input
               type={type}
               name={name}
-              value={value}
-              defaultValue={defaultValue}
               className={`rounded-2xl bg-form-bg py-[13px] px-7 w-full ${
                   isError && "input-error"
               } input-${variant} ${className} `}
               ref={input}
               autoComplete={autoComplete}
               required={required}
-              onChange={(e) => handleChange(e)}
               placeholder={placeholder}
           />
       </div>
